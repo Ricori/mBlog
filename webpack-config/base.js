@@ -13,10 +13,8 @@ module.exports = {
     module: {
         rules:[{
             test: /\.js$/,
+            exclude: /node_modules/,
             loader: 'babel-loader'
-        },{
-            test: /\.ejs$/,
-            loader: 'ejs-loader'
         },{
             test: /\.html$/,
             loader: 'html-loader',

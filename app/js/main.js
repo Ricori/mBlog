@@ -1,10 +1,6 @@
 require('../scss/main.scss');
-var mainRender = require('../templates/main.ejs')
 
-/* 
 
-Your JS code
-
-*/
-
-document.body.innerHTML = mainRender({data:'This is a webpack-demo'});
+window.onload=function(){
+document.body.innerHTML = "<h1>123</h1>";
+}
