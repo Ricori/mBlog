@@ -1,0 +1,43 @@
+#nav-bar{
+    margin-top: 15px;
+    position: relative;
+    height: 3em;
+
+    li{
+        display: inline-block;
+        width: 25%;
+        padding-top: 20px;
+    }
+
+    a {
+        display: inline-block;
+        font-size: 1.4em;
+        width: 100%;
+    }
+
+    .create a {
+        text-align: left;
+    }
+    .skill a {
+        padding-left: 35%;
+    }
+    .art a {
+        padding-left: 65%;
+    }
+    .life a {
+        text-align: right;
+    }
+
+}
+
+.bar-container {
+    margin-top: 0;
+    height: 3px;
+
+    .bar {
+        display: inline-block;
+        width: 75px;
+        height: 3px;
+        transition: all .5s ease-out;
+    }
+}
