@@ -6,7 +6,7 @@ module.exports = {
     entry: ROOT_PATH + "/app/js/main.js",
     plugins:[
         new HtmlwebpackPlugin({
-            title: 'Webpack demo',
+            title: 'mBlog',
             template: ROOT_PATH + '/app/templates/indextp/index.html'
         })
     ],

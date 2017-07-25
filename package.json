@@ -1,7 +1,7 @@
 {
-  "name": "my-webpack-demo",
+  "name": "mBlog",
   "version": "1.0.0",
-  "description": "this is my webpack2 template I use",
+  "description": "a small blog base nodejs",
   "scripts": {
     "start": "npm run dev",
     "build": "npm run prod",
@@ -9,6 +9,7 @@
     "prod": "cross-env NODE_env=prod webpack"
   },
   "author": "Ricori",
+  "license": "MIT License",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "cross-env": "^5.0.1",
