@@ -1,6 +1,7 @@
-require('../scss/main.scss');
+import React from 'react';
+import {render} from 'react-dom';
+import '../scss/main.scss';
 
-
-window.onload=function(){
-document.body.innerHTML = "<h1>123</h1>";
-}
+render(
+    <h1>hello world</h1>, 
+    document.body);
