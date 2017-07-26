@@ -17,21 +17,22 @@ class Navbar extends Component{
         this.forceUpdate();
     }
 
-    //取当前主题下的颜色
-    getThemeColor(themeid){
-        return themeid == 1 ? "rgb(80, 144, 128)" : "rgb(128, 141, 106)";
-    }
-
     render() {
         const titleBar = this.refs.titleBar;
         const titleBarStyle = {};
-
         if(titleBar){
             const nav = this.refs["span" + this.props.theme];
-            const left = nav ? nav.offsetLeft : titleBar.offsetLeft + 10;
-            titleBarStyle.width = nav ? nav.offsetWidth + 20 : titleBar.offsetWidth;
-            titleBarStyle.backgroundColor = nav ? this.getThemeColor(this.props.theme) : 'rgba(0, 0, 0, 0)';
-            titleBarStyle.transform = nav ? `translateX(${left - 10}px)` : titleBar.style.transform;
+            if(nav){
+                const left = nav.offsetLeft;
+                titleBarStyle.width = nav.offsetWidth + 20;
+                titleBarStyle.backgroundColor = this.props.getThemeColor(this.props.theme);
+                titleBarStyle.transform = `translateX(${left - 10}px)`;
+            }else{
+                const left = titleBar.offsetLeft + 10;
+                titleBarStyle.width = titleBar.offsetWidth;
+                titleBarStyle.backgroundColor = 'rgba(0, 0, 0, 0)';
+                titleBarStyle.transform = titleBar.style.transform;
+            }
         }
 
         return (
