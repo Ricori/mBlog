@@ -6,7 +6,7 @@ class Navbar extends Component{
         super(props);
     }
 
-    //窗口大小调整后强制刷新
+    //窗口大小调整后强制重新渲染
     componentDidMount() {
         window.addEventListener('resize', this.onWindowResize)
     }
