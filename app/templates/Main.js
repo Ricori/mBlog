@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Left from './Left';
 import Navbar from './Navbar';
+import Content from './Content';
 
 class Main extends Component{
     constructor(props) {
@@ -45,7 +46,7 @@ class Main extends Component{
                         changeTheme={this.changeTheme}
                         getThemeColor={this.getThemeColor}
                         />
-                        <div id="content" onMouseEnter={this.changeThemeToDefault}></div>
+                        <Content changeThemeToDefault={this.changeThemeToDefault} />
                     </div>
                     <div className="right" onMouseEnter={this.changeThemeToDefault}></div>
                 </div>
