@@ -26,7 +26,7 @@ class Main extends Component{
 
     getThemeColor(themeid){
         const themeColor = [
-            "#b0d3d1",
+            "rgb(80, 139, 216)",
             "rgb(80, 144, 128)",
             "#06214c",
             "rgb(181, 126, 121)",
@@ -46,7 +46,11 @@ class Main extends Component{
                         changeTheme={this.changeTheme}
                         getThemeColor={this.getThemeColor}
                         />
-                        <Content changeThemeToDefault={this.changeThemeToDefault} />
+                        <div id="content" onMouseEnter={this.changeThemeToDefault}>
+                            <Content theme={this.state.theme} 
+                            getThemeColor={this.getThemeColor}
+                            />
+                        </div>
                     </div>
                     <div className="right" onMouseEnter={this.changeThemeToDefault}></div>
                 </div>
