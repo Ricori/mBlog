@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import '../scss/navbar.scss';
 
 class Navbar extends Component{
@@ -36,19 +37,20 @@ class Navbar extends Component{
         }
 
         return (
+            <Router>
             <div id="nav-bar">
                 <nav className="list">
                     <li className="create" onMouseEnter={() => this.props.changeTheme(1)}>
-                        <a href="/category/Create"><span ref="span1">Create</span></a>
+                        <Link to="/category/Create"><span ref="span1">Create</span></Link>
                     </li>
                     <li className="skill" onMouseEnter={() => this.props.changeTheme(2)}>
-                        <a href="/category/Skill"><span ref="span2">Skill</span></a>
+                        <Link to="/category/Skill"><span ref="span2">Skill</span></Link>
                     </li>
                     <li className="art" onMouseEnter={() => this.props.changeTheme(3)}>
-                        <a href="/category/Art"><span ref="span3">Art</span></a>
+                        <Link to="/category/Art"><span ref="span3">Art</span></Link>
                     </li>
                     <li className="life" onMouseEnter={() => this.props.changeTheme(4)}>
-                        <a href="/category/Life"><span ref="span4">Life</span></a>
+                        <Link to="/category/Life"><span ref="span4">Life</span></Link>
                     </li>
                 </nav>
                 <div className="bar-container">
@@ -57,6 +59,7 @@ class Navbar extends Component{
                     ></span>
                 </div>
             </div>
+            </Router>
         )
     }
 

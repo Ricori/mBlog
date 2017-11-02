@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import Left from './Left';
 import Navbar from './Navbar';
 import Content from './Content';
@@ -36,6 +37,7 @@ class Main extends Component{
     }
     
     render() {
+        console.log(this.props.match);
         return (
             <div id="container-content">
                 <Left pic={this.state.theme} />
@@ -54,7 +56,7 @@ class Main extends Component{
                     </div>
                     <div className="right" onMouseEnter={this.changeThemeToDefault}></div>
                 </div>
-            </div>
+            </div>       
         )
     }
 }
